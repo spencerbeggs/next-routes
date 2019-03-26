@@ -97,10 +97,13 @@ class Routes {
       if (pathname) {
         try {
           req.serverSideProps = query;
-          require(`${basename}/serverless/pages${route.page}`).render(req, res);
+          if (["/", "", "/index.html"].includes(pathname)) {
+            return require(`${basename}/serverless/pages/index`).render(req, res);
+          }
+          return require(`${basename}/serverless/pages${route.page}`).render(req, res);
         } catch (err) {
           console.log(err);
-          require(`${basename}/serverless/pages/_error`).render(req, res);
+          return require(`${basename}/serverless/pages/_error`).render(req, res);
         }
       }
     }
