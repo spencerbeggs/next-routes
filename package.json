@@ -1,10 +1,10 @@
 {
-  "name": "@yolkai/next-routes",
-  "version": "3.0.0",
+  "name": "@spencerbeggs/next-routes",
+  "version": "3.1.0",
   "description": "Easy to use universal dynamic routes for Next.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yolk-hq/next-routes.git"
+    "url": "git+https://github.com/spencerbeggs/next-routes.git"
   },
   "publishConfig": {
     "access": "public"
@@ -23,7 +23,8 @@
     "test": "npm run testOnly && npm run testTypings",
     "testOnly": "jest",
     "testTypings": "tsc --project ./typings/tests",
-    "dev": "concurrently -k 'npm run build -- -w' 'npm run testOnly -- --watch'"
+    "dev": "concurrently -k 'npm run build -- -w' 'npm run testOnly -- --watch'",
+    "upgrade-interactive": "npm-check --update"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -32,7 +33,7 @@
     "path-to-regexp": "^3.0.0"
   },
   "peerDependencies": {
-    "next": ">=2",
+    "next": ">=8",
     "react": "^15.4.2 || ^16"
   },
   "devDependencies": {
@@ -50,6 +51,7 @@
     "del-cli": "1.1.0",
     "jest": "24.0.0",
     "next": "7.0.2",
+    "npm-check": "^5.9.0",
     "prop-types": "15.6.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
