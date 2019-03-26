@@ -1,4 +1,4 @@
-import path from "path";
+import path from 'path'
 import pathToRegexp from 'path-to-regexp'
 import React from 'react'
 import { parse } from 'url'
@@ -89,21 +89,21 @@ class Routes {
   }
 
   getServerlessRequestHandler () {
-    const basename = path.dirname(module.parent.filename);
-    
+    const basename = path.dirname(module.parent.filename)
+
     return (req, res) => {
       const { route, query, parsedUrl } = this.match(req.url)
       const { pathname } = parsedUrl
       if (pathname) {
         try {
-          req.serverSideProps = query;
-          if (["/", "", "/index.html"].includes(pathname)) {
-            return require(`${basename}/serverless/pages/index`).render(req, res);
+          req.serverSideProps = query
+          if (['/', '', '/index.html'].includes(pathname)) {
+            return require(`${basename}/serverless/pages/index`).render(req, res)
           }
-          return require(`${basename}/serverless/pages${route.page}`).render(req, res);
+          return require(`${basename}/serverless/pages${route.page}`).render(req, res)
         } catch (err) {
-          console.log(err);
-          return require(`${basename}/serverless/pages/_error`).render(req, res);
+          console.log(err)
+          return require(`${basename}/serverless/pages/_error`).render(req, res)
         }
       }
     }

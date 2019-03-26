@@ -7,4 +7,4 @@
 
 const babelJest = require('babel-jest')
 
-module.exports = babelJest.createTransformer(require('../.babelrc'))
+module.exports = babelJest.createTransformer(require('../.babelrc.js'))
