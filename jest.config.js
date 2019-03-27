@@ -19,6 +19,6 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(ts|tsx|js)$': require.resolve('./jest/babelTransformer')
+    '^.+\\.(ts|tsx|js)$': "babel-jest"
   }
 }

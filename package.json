@@ -1,6 +1,6 @@
 {
   "name": "@spencerbeggs/next-routes",
-  "version": "3.1.0",
+  "version": "3.3.0",
   "description": "Easy to use universal dynamic routes for Next.js",
   "repository": {
     "type": "git",
@@ -12,8 +12,7 @@
   "main": "dist",
   "typings": "typings/next-routes.d.ts",
   "files": [
-    "dist",
-    "typings"
+    "dist"
   ],
   "scripts": {
     "lint": "standard 'src/*' 'test/*'",
@@ -29,7 +28,7 @@
     "parser": "babel-eslint"
   },
   "dependencies": {
-    "eslint": "^5.15.3",
+    "@babel/runtime": "^7.4.2",
     "path-to-regexp": "^3.0.0"
   },
   "peerDependencies": {
@@ -37,27 +36,33 @@
     "react": "^15.4.2 || ^16"
   },
   "devDependencies": {
-    "@babel/cli": "7.2.3",
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.3.1",
-    "@types/jest": "23.3.13",
-    "@types/next": "7.0.8",
-    "@types/node": "10.12.20",
-    "@zeit/next-typescript": "1.1.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "10.0.1",
-    "babel-jest": "24.0.0",
-    "concurrently": "4.1.0",
-    "del-cli": "1.1.0",
-    "jest": "24.0.0",
-    "next": "8.0.3",
-    "prop-types": "15.6.2",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
-    "react-test-renderer": "16.7.0",
-    "react-testing-library": "5.4.4",
-    "standard": "12.0.1",
-    "typescript": "3.3.1"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.4.2",
+    "@types/jest": "^24.0.11",
+    "@types/next": "^8.0.3",
+    "@types/node": "^11.12.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.5.0",
+    "concurrently": "^4.1.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^5.15.3",
+    "jest": "^24.5.0",
+    "jest-haste-map": "^24.5.0",
+    "jest-resolve": "^24.5.0",
+    "next": "^8.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-test-renderer": "^16.8.5",
+    "react-testing-library": "^6.0.3",
+    "standard": "^12.0.1",
+    "typescript": "^3.3.4000"
   },
   "author": "fridays",
   "license": "MIT",

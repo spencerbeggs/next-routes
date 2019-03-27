@@ -2,8 +2,10 @@
 jest
 src
 test
-typings
-.babelrc.jest.travis.yml
+.babelrc
+.jest
+.travis.yml
 jest.config.js
 README.md
 renovate.json
+typings/tests
